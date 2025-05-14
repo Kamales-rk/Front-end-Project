@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Women's Fashion</title>
+  <style>
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff0f5;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.product-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  width: 220px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.product-card h2 {
+  font-size: 1.1em;
+  margin: 10px 0;
+}
+
+.product-card p {
+  font-size: 1.1em;
+  color: #e91e63;
+}
+
+button {
+  margin-top: 10px;
+  background-color: #e91e63;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c2185b;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Women's Fashion Collection</h1>
+  </header>
+
+  <main class="product-container">
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x200?text=Dress" alt="Dress" />
+      <h2>Elegant Dress</h2>
+      <p>Rs.4500</p>
+      <button onclick="addToCart('Elegant Dress', 4500)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x200?text=Handbag" alt="Handbag" />
+      <h2>Leather Handbag</h2>
+      <p>Rs.8000</p>
+      <button onclick="addToCart('Leather Handbag', 8000)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x200?text=Heels" alt="Heels" />
+      <h2>High Heels</h2>
+      <p>Rs.5500</p>
+      <button onclick="addToCart('High Heels', 5500)">Add to Cart</button>
+    </div>
+  </main>
+<div style="display: flex; justify-content: center; margin-top: 20px;">
+  <span style="background-color: #e91e63; padding: 10px; border-radius: 6px;">
+    <a href="index.html" style="text-decoration: none; color: white;">Home</a>
+  </span>
+</div>
+  <footer>
+    <div id="cart-count">🛒 Cart: 0 items</div>
+  </footer>
+
+  <script src="women.js"></script>
+</body>
+</html>

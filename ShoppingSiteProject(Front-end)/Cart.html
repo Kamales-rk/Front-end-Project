@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <link rel="stylesheet" href="Cart.css">
+
+</head>
+<body>
+   <link rel="stylesheet" href="Cart.css">
+ <div class="container">
+    <h1>Shop Products</h1>
+    <div class="products">
+      <div class="product">
+        <h2>Dragon T-Shirt + Bag</h2>
+        <p>Rs.499</p>
+        <button onclick="addToCart('Dragon T-Shirt + Bag', 499)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <h2>Silver Bracelet</h2>
+        <p>Rs.1,699</p>
+        <button onclick="addToCart('Silver Bracelet', 1699)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <h2>Waist-Belt(Formal)</h2>
+        <p>Rs.699</p>
+        <button onclick="addToCart('Waist-Belt(Formal)', 699)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <h2>Exotic Handbag</h2>
+        <p>Rs.2499</p>
+        <button onclick="addToCart('Exotic Handbag', 2499)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <h2>DressBerry Watch</h2>
+        <p>Rs.1499</p>
+        <button onclick="addToCart('DressBerry Watch', 1499)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <h2>Anime Shirt + Bag</h2>
+        <p>Rs.699</p>
+        <button onclick="addToCart('Anime Shirt + Bag', 699)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <h2>Leather Wallet</h2>
+        <p>Rs.999</p>
+        <button onclick="addToCart('Leather Wallet', 999)">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="cart">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p id="total">Total: $0</p>
+      <button onclick="checkout()">Checkout</button>
+      <span style="display: block;margin-top: 20px;text-align: center;align-items: end; background-color:#28a745 ; padding: 10px;border-radius: 6px; "><a href="index.html" style="text-decoration: none;color: white;">Home</a></span>
+    </div>
+  </div>
+
+  <script src="Cart.js"></script>
+</body>
+</html>

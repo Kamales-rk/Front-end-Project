@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Men's Fashion</title>
+  <style>
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.product-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  width: 220px;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.product-card h2 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.product-card p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+button {
+  margin-top: 10px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Men's Collection</h1>
+  </header>
+
+  <main class="product-container">
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x200?text=T-Shirt" alt="T-Shirt" />
+      <h2>Classic T-Shirt</h2>
+      <p>$25</p>
+      <button onclick="addToCart('Classic T-Shirt', 25)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x200?text=Jacket" alt="Jacket" />
+      <h2>Leather Jacket</h2>
+      <p>$120</p>
+      <button onclick="addToCart('Leather Jacket', 120)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x200?text=Shoes" alt="Shoes" />
+      <h2>Running Shoes</h2>
+      <p>$60</p>
+      <button onclick="addToCart('Running Shoes', 60)">Add to Cart</button>
+    </div>
+    
+  </main>
+<div style="display: flex; justify-content: center; margin-top: 20px;">
+  <span style="background-color: #007bff; padding: 10px; border-radius: 6px;">
+    <a href="index.html" style="text-decoration: none; color: white;">Home</a>
+  </span>
+</div>
+
+  <footer>
+    <div id="cart-count">🛒 Cart: 0 items</div>
+    
+  </footer>
+
+  <script src="mens.js"></script>
+</body>
+</html>

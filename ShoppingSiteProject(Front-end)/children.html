@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Children's Products</title>
+  <style>
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #fef9e7;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ff6f00;
+}
+
+.product-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  background: #fff9c4;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  width: 220px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.product-card h2 {
+  font-size: 1.1em;
+  margin: 10px 0;
+  color: #ff6f00;
+}
+
+.product-card p {
+  font-size: 1.1em;
+  color: #f57c00;
+}
+
+button {
+  margin-top: 10px;
+  background-color: #ff9800;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ef6c00;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Children's Product Collection</h1>
+  </header>
+
+  <main class="product-container">
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x200?text=Toy+Car" alt="Toy Car" />
+      <h2>Toy Car</h2>
+      <p>$15</p>
+      <button onclick="addToCart('Toy Car', 15)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x200?text=Kids+Shirt" alt="Kids Shirt" />
+      <h2>Kids Shirt</h2>
+      <p>$20</p>
+      <button onclick="addToCart('Kids Shirt', 20)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x200?text=Story+Book" alt="Story Book" />
+      <h2>Story Book</h2>
+      <p>$10</p>
+      <button onclick="addToCart('Story Book', 10)">Add to Cart</button>
+    </div>
+  </main>
+<div style="display: flex; justify-content: center; margin-top: 20px;">
+  <span style="background-color: #ff9800; padding: 10px; border-radius: 6px;">
+    <a href="index.html" style="text-decoration: none; color: white;">Home</a>
+  </span>
+</div>
+  <footer>
+    <div id="cart-count">🛒 Cart: 0 items</div>
+  </footer>
+
+  <script src="children.js"></script>
+</body>
+</html>

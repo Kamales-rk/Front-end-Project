@@ -1,0 +1,145 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+          padding: 0px;
+          margin: 0px;
+        }
+      
+        body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: #f4f4f4;
+        }
+      
+        .container {
+          width: 300px;
+          text-align: center;
+          background-color: #fff;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding: 20px;
+        }
+      
+        input {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          font-size: 14px;
+        }
+      
+        input:focus {
+          border-color: #007bff;
+          outline: none;
+        }
+      
+        .formg {
+          margin-bottom: 15px;
+          text-align: left;
+        }
+      
+        h2 {
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
+      
+        label {
+          display: block;
+          margin-bottom: 5px;
+        }
+      
+        button {
+          background-color: #007bff;
+          color: white;
+          border: none;
+          padding: 10px;
+          width: 100%;
+          border-radius: 4px;
+          font-size: 16px;
+          cursor: pointer;
+        }
+      
+        button:hover {
+          background-color: #0056b3;
+        }
+      
+        .success {
+          color: green;
+          font-size: 12px;
+        }
+      
+        .error {
+          color: red;
+          font-size: 12px;
+        }
+      </style>
+
+</head>
+<body id="log">
+    <div class="container">
+        <h2>Log In</h2>
+            <form id="submitdata">
+            <div class="formg">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <span id="emailError"></span>
+            </div>
+            <div class="formg">
+                <label for="passcode">Password</label>
+                <input type="password" id="passcode" name="passcode" required>
+                <span id="passwordError"></span>
+            </div>
+            <button type="submit" value="Submit" form="submitdata" onclick="submitindex()">Submit</button>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById('submitdata').addEventListener('submit', (e) => {
+        e.preventDefault();
+        let Email = document.getElementById('email').value;
+        let Passcode = document.getElementById('passcode').value;
+    
+        let emailerror = document.getElementById('emailError');
+        let passworderror = document.getElementById('passwordError');
+    
+        const emailregex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        const passregex = /^(?=(.*\d){3,})(?=.*[!@#$%^&*()_+={}:;"'<>,.?/\\|]).{8,12}$/;
+    
+        var validate = true;
+    
+        // Email validation
+        if (emailregex.test(Email)) {
+          emailerror.textContent = 'Email entered';
+          emailerror.className = 'success';
+        } else {
+          emailerror.textContent = 'Please enter a valid email address';
+          emailerror.className = 'error';
+          validate = false;
+        }
+    
+        // Password validation
+        if (passregex.test(Passcode)) {
+          passworderror.textContent = 'Password entered';
+          passworderror.className = 'success';
+        } else {
+          passworderror.textContent = 'Password must be 8-12 characters long, include at least 3 digits, and at least one special character';
+          passworderror.className = 'error';
+          validate = false;
+        }
+    
+        if(validate){
+        e.target.submit();
+        window.location.href="index.html";
+      }
+      });
+      </script>
+    
+</body>
+</html>
